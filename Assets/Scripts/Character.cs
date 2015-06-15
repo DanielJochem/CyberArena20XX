@@ -32,7 +32,7 @@ public class Character
 			case CharacterClass.WarpThief:
 				classStat = this.dexterity;
 				break;
-		} classStat * this.level;
+		} return classStat * this.level; //WHY ISN'T THIS WORKING
 	}
 
 	bool isDead = this.damageTaken >= this.maxHealth;
@@ -45,6 +45,7 @@ public class Character
 		this.xp += xpAmount;
 	}
 
+	//Parse error?
 	int RollDamage() = Terminal.Random(this.minDamage, (this.maxDamage + 1)) + this.damageBonus;
 }
 
@@ -52,5 +53,5 @@ public class Character
  * Am I meant to be using "this.whatever" because you haven't taught it. Good luck explaining it to the class, it took me a while to understand it haha.
  * Am I meant to be using Mathf.Clamp for dodgeChance? It seems like the only option after some research on the internet.
  * Am I meant to be using a get or set for some of these, Unity asks for one of the two but we haven't learnt these.
- * ERRORS (unfortunately)
+ * ERRORS (unfortunately) especially lines 35 and 49.
  */
